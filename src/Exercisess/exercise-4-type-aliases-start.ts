@@ -3,6 +3,7 @@
  */
 
 // Create a `Country` type alias for the `string` type.
+type Country = string;
 // Change the type for each variable to use the `Country` type.
 
 const country1: string = "Nigeria";
