@@ -3,7 +3,7 @@
  */
 
 class Currency {
-    private name: string;
+    public name: string;
     private code: string;
     private symbol: string;
 
@@ -24,37 +24,23 @@ class Currency {
 
 // Alter this class to extend the `Currency` class.
 
-class DetailedCurrency {
+class DetailedCurrency extends Currency {
+    private banknotes: number[];
 
-    // Define a private field named `banknotes`.
-    // Set the field type so it can be used to store an array of numbers.
-
-
-
-    // Add a `banknotes` parameter with the same type as the `banknotes` field.
-
-    constructor(name: string, code: string, symbol: string) {
-        // Fix this call to the parent constructor.
-
-        super(name, code);
-
-        // Store the value of the `banknotes` parameter in the corresponding field.
-
-
+    constructor(name: string, code: string, symbol: string, banknotes: number[]) {
+        super(name, code, symbol);
+        this.banknotes = banknotes;
     }
 
     // Change the visibility modifier on this method so it can be called
     // by code outside of this class.
-
-    private describeBankNotes() {
+    public describeBankNotes(): void {
         // Change the visibility of the parent class `name` field so
         // that its value can be read here in this child class method.
-
         let description = `The ${this.name} currency uses the banknotes `;
 
         // Replace `null` with the value of the `banknotes` field.
-
-        description += null;
+        description += this.banknotes.join(", ");
 
         console.log(description);
     }
@@ -63,8 +49,12 @@ class DetailedCurrency {
 
 const euroCurrency = new DetailedCurrency("Euro", "EUR", "€", [500, 200, 100, 50, 20, 10, 5]);
 
+console.log(euroCurrency);
+
+// Call the `describe()` method on the `euroCurrency` object.
 euroCurrency.describe();
 
+// Call the `describeBankNotes()` method on the `euroCurrency` object.
 euroCurrency.describeBankNotes();
 
 // ----
