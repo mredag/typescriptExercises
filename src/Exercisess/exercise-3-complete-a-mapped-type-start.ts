@@ -1,5 +1,6 @@
 /**
 START: Follow the instructions below.
+exercise20
 */
 type CountryData = {
     name: string;
