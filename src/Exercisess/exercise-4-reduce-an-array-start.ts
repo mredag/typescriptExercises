@@ -21,7 +21,7 @@ const populations = [
 
 const sumOfPopulations = populations.reduce((total, population) => {
     return total + population;
-}, false);
+}, 0); // <-- Changed this value to the initial value. insted of Truee
 
 console.log(sumOfPopulations);
 
