@@ -2,13 +2,10 @@
  * START: Follow the instructions below.
  */
 
-// Change the `Country` interface so the `population` property is optional.
-// This will fix the type error for `countryB`.
-
 interface Country {
     name: string;
     code: string;
-    population: number;
+    population?: number; // population is now optional
 }
 
 const countryA: Country = {
@@ -32,7 +29,7 @@ const countryC: Country = {
 // This will cause a type error. Remove the code that now has a type error.
 
 type Currency = {
-    name: string;
+    readonly name: string; // name is now read-only
     code: string;
     symbol: string;
 };
@@ -43,9 +40,9 @@ const currencyData: Currency = {
     symbol: "€",
 };
 
-currencyData.name = "Gold";
+// Removed: currencyData.name = "Gold"; // This line is now incorrect and has been removed.
 
-currencyData.code = "GGG";
+currencyData.code = "EMRE";
 
 // ----
 
