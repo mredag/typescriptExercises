@@ -8,7 +8,7 @@
 //
 // This should fix the type error on Line 15.
 
-type Currency = string;
+type Currency = string | boolean;
 
 let indianCurrency: Currency = "Indian rupee";
 
@@ -19,7 +19,7 @@ let narniaCurrency: Currency = false;
 //
 // This should fix the type error on Lines 28 and 30.
 
-function outputCountryData(country: string, data: number) {
+function outputCountryData(country: string, data: number | string) {
     console.log(`The data for ${country} is: ${data}`);
 }
 
@@ -32,5 +32,8 @@ outputCountryData("United States of America", "English");
 outputCountryData("India", 1_352_642_280);
 
 // ----
+
+console.log(indianCurrency);
+console.log(narniaCurrency);
 
 export {};
