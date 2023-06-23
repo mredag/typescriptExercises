@@ -6,19 +6,18 @@
 // Use the generic interface type `ReadonlyArray`: ReadonlyArray<type>
 // This will cause a type error. Remove the code that now has a type error.
 
-const languages = ["Mongolian", "French", "Basque", "Thai"];
+const languages: ReadonlyArray<string> = ["Mongolian", "French", "Basque", "Thai"];
 
-languages[2] = "Hausa";
-
+// languages[2] = "Hausa"; // Type error
 console.log(languages);
 
 // Prevent the array from being modified.
 // Use the readonly modifier and the array literal type syntax: readonly type[]
 // This will cause a type error. Remove the code that now has a type error.
 
-const currencies = ["NZD", "THB", "NGN", "EUR", "COP", "INR"];
+const currencies: readonly string[] = ["NZD", "THB", "NGN", "EUR", "COP", "INR"];
 
-currencies.reverse();
+// currencies.reverse(); // Type error
 
 console.log(currencies);
 
