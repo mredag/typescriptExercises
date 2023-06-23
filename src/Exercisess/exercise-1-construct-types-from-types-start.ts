@@ -22,7 +22,7 @@ interface Country {
     
     // Change the CompleteCountry type to use the Required utility type.
     // This should cause a type error for the countryB object.
-    // Fix the type error by adding the missing property to the object.
+    // Fix the type error by adding the missing property to the object..
     
     type CompleteCountry = Required<Country>;
     

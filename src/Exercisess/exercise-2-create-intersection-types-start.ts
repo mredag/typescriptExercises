@@ -35,7 +35,7 @@ const countryA: CountryWithLanguages = {
 // Use the type alias syntax: type CountryWithStatistics = type;
 //
 // Add a type annotation with the `CountryWithStatistics` type on
-// the variable `countryB`.
+// the variable `countryB`...
 
 type CountryWithStatistics = Country & CountryStatistics;
 
